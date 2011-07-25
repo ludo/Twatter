@@ -7,7 +7,7 @@ end
 # When
 
 When /^I enter a valid message$/ do
-  fill_in("Message", :with => "Something I want to share")
+  fill_in("Body", :with => "Something I want to share")
 end
 
 # Then
