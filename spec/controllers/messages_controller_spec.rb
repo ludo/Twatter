@@ -5,4 +5,9 @@ describe MessagesController do
     get :new
     response.should be_success
   end
+
+  it "should render the 'new' template" do
+    get :new
+    response.should render_template("new")
+  end
 end
