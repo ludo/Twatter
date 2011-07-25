@@ -29,6 +29,11 @@ describe MessagesController do
   end
 
   describe "POST /messages" do
+    before(:each) do
+      @message = Message.new
+      Message.stub(:new).and_return(@message)
+    end
+
     it "should initialize a new message from params" do
       attrs = { "body" => "Something interesting" }
       Message.should_receive(:new).with(attrs)
