@@ -10,4 +10,8 @@ When /^I enter a valid message$/ do
   fill_in("Body", :with => "Something I want to share")
 end
 
+When /^I post the message$/ do
+  click_button("Share")
+end
+
 # Then
