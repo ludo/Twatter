@@ -53,7 +53,7 @@ describe MessagesController do
 
   describe "GET /messages" do
     it "should render 'index' template" do
-      get :messages
+      get :index
       response.should render_template("index")
     end
 

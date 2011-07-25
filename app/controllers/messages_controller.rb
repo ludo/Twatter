@@ -10,4 +10,8 @@ class MessagesController < ApplicationController
 
     redirect_to messages_path
   end
+
+  def index
+
+  end
 end
