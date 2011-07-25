@@ -57,7 +57,11 @@ describe MessagesController do
       response.should render_template("index")
     end
 
-    it "should query all messages"
+    it "should query all messages" do
+      Message.should_receive(:all)
+      get :index
+    end
+
     it "should expose the messages for the view"
   end
 end
