@@ -11,6 +11,10 @@ describe MessagesController do
     response.should render_template("new")
   end
 
-  it "should initialize a new message"
+  it "should initialize a new message" do
+    Message.should_receive(:new)
+    get :new
+  end
+
   it "should expose a new message to the view"
 end
