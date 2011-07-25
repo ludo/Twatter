@@ -52,7 +52,11 @@ describe MessagesController do
   end
 
   describe "GET /messages" do
-    it "should render 'index' template"
+    it "should render 'index' template" do
+      get :messages
+      response.should render_template("index")
+    end
+
     it "should query all messages"
     it "should expose the messages for the view"
   end
