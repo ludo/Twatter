@@ -52,6 +52,11 @@ describe MessagesController do
   end
 
   describe "GET /messages" do
+    before(:each) do
+      @messages = [mock_model(Message), mock_model(Message)]
+      Message.stub!(:all).and_return(@messages)
+    end
+
     it "should render 'index' template" do
       get :index
       response.should render_template("index")
@@ -62,6 +67,9 @@ describe MessagesController do
       get :index
     end
 
-    it "should expose the messages for the view"
+    it "should expose the messages for the view" do
+      get :index
+      assigns[:messages].should == @messages
+    end
   end
 end
