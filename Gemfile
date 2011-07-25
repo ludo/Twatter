@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0.rc4'
 
 gem 'coffee-script', '2.2.0'
+gem 'haml', '3.1.2'
 gem 'jquery-rails', '1.0.12'
 gem 'mysql2', '0.3.6'
 gem 'sass-rails', '~> 3.1.0.rc'
