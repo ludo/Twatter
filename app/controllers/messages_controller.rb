@@ -4,6 +4,6 @@ class MessagesController < ApplicationController
   end
 
   def create
-
+    @message = Message.new(params[:message])
   end
 end
