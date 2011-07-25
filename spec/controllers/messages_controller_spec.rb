@@ -35,7 +35,10 @@ describe MessagesController do
       post :create, message: attrs
     end
 
-    it "should save the message"
+    it "should save the message" do
+      @message.should_receive(:save)
+      post :create
+    end
 
     it "should redirect to shared messages list" do
       post :create
