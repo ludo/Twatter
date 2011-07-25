@@ -50,4 +50,10 @@ describe MessagesController do
       response.should redirect_to(messages_path)
     end
   end
+
+  describe "GET /messages" do
+    it "should render 'index' template"
+    it "should query all messages"
+    it "should expose the messages for the view"
+  end
 end
