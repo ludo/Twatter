@@ -30,11 +30,16 @@ describe MessagesController do
 
   describe "POST /messages" do
     it "should initialize a new message from params" do
-      Message.should_receive(:new).with(:body => "Something interesting")
-      post :create, :body => "Something interesting"
+      attrs = { "body" => "Something interesting" }
+      Message.should_receive(:new).with(attrs)
+      post :create, message: attrs
     end
 
     it "should save the message"
-    it "should redirect to shared messages list"
+
+    it "should redirect to shared messages list" do
+      post :create
+      response.should redirect_to(messages_path)
+    end
   end
 end
