@@ -16,5 +16,8 @@ describe MessagesController do
     get :new
   end
 
-  it "should expose a new message to the view"
+  it "should expose a new message to the view" do
+    get :new
+    assigns[:message].should_not be_nil
+  end
 end
