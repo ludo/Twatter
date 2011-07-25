@@ -15,3 +15,7 @@ When /^I post the message$/ do
 end
 
 # Then
+
+Then /^I should see my newly created message$/ do
+  page.should have_content("Something I want to share")
+end
