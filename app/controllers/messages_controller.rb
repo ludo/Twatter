@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
   def new
-    Message.new
+    @message = Message.new
   end
 end
