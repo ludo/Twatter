@@ -4,6 +4,7 @@ describe MessagesController do
   describe "GET /messages/new" do
     before(:each) do
       @message = Message.new
+      Message.stub(:new).and_return(@message)
     end
 
     it "should have a 'new' action" do
