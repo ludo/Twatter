@@ -4,6 +4,7 @@ gem 'rails', '3.1.0.rc4'
 
 gem 'coffee-script', '2.2.0'
 gem 'haml', '3.1.2'
+gem 'headless', '0.1.0'
 gem 'jquery-rails', '1.0.12'
 gem 'pg', '0.11.0'
 gem 'sass-rails', '~> 3.1.0.rc'
