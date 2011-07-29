@@ -9,7 +9,7 @@ if Rails.env.ci?
     Capybara::Selenium::Driver.new(app,
       :browser => :remote,
       :url => "http://ci2.amsterdam.viaviela.local:4444/wd/hub",
-      :desired_capabilities => :chrome
+      :desired_capabilities => :firefox
     )
   end
 end
