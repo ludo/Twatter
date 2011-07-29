@@ -4,10 +4,13 @@ development:
   pool: 5
   timeout: 3000
 
-test:
+test: &test
   adapter: postgresql
   database: test_twatter
   username: test_twatter
   password: beheer
   host: localhost
   encoding: UTF8
+
+ci:
+  <<: *test

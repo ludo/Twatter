@@ -12,18 +12,6 @@ require 'cucumber/rails'
 # steps to use the XPath syntax.
 Capybara.default_selector = :css
 
-Capybara.server_port = 3000
-Capybara.app_host = "http://ci1.amsterdam.viaviela.local:#{Capybara.server_port}"
-
-Capybara.default_driver = :selenium
-Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app,
-    :browser => :remote,
-    :url => "http://ci2.amsterdam.viaviela.local:4444/wd/hub"
-    #:desired_capabilities => :firefox)
-  )
-end
-
 # By default, any exception happening in your Rails application will bubble up
 # to Cucumber so that your scenario will fail. This is a different from how
 # your application behaves in the production environment, where an error page will
