@@ -1,3 +1,4 @@
+@javascript
 Feature: Post message
   As a Visitor
   I want to post a message
@@ -9,6 +10,7 @@ Feature: Post message
     And I post the message
     Then I should see my newly created message
 
+  @wip
   Scenario: Post an invalid message
     Given I view the new message form
     When I enter an invalid message
