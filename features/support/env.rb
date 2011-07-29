@@ -15,7 +15,7 @@ Capybara.default_selector = :css
 Capybara.app_host = "http://192.168.1.37:3000"
 Capybara.default_driver = :selenium
 Capybara.register_driver :selenium do |app|
-  Capybara::Driver::Selenium.new(app,
+  Capybara::Selenium::Driver.new(app,
     :browser => :remote,
     :url => "http://ci2.amsterdam.viaviela.local:4444/wd/hub"
     #:desired_capabilities => :firefox)
